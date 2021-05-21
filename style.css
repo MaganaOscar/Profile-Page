@@ -187,3 +187,7 @@ li {
     border: 2px grey solid;
 }
 
+.request-block .block-content .req {
+    margin-left: auto;
+}
+
