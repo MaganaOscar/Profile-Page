@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-    <title>Profile Page</title>
+    <title>Making Connections</title>
 </head>
 <body>
     <div class="container">
@@ -26,7 +26,7 @@
                     <div class="card">
                         <img class="circle" src="images\img\images\jane-m.jpg" alt="icon for default profile: silhoutte of person">
                         <div class="info">
-                            <h1>Jane Doe</h1>
+                            <h1 id="username">Jane Doe</h1>
                             <p>
                                 <img class="pin" src="images\icons\icons\map-marker.png">Seattle
                             </p>
@@ -34,7 +34,7 @@
                             Master of shadows and the Internet!</p>
                             <p>    
                                 <img class="cog" src="images\icons\icons\gear.png">
-                                <a href="#">edit profile</a>
+                                <a onClick="changeName()" href="#">edit profile</a>
                             </p>   
                         </div>
                     </div>
@@ -53,21 +53,31 @@
             <div class="connection-col">
                 <div class="request-block">
                     <div class="block-header">
-                        <p class="circSmall">2</p>
+                        <p id="requests" class="circSmall">2</p>
                         <p>
                             Connection Requests
                         </p>
                     </div>
                     <div class="block-content">
                         <ul>
-                            <li><img src="images\img\images\todd-s.jpg">Todd E<img class="req" src="images\icons\icons\accept-circle.png"><img src="images\icons\icons\close-circle.png"></li>
-                            <li><img src="images\img\images\phil-s.jpg">Phil K<img class="req" src="images\icons\icons\accept-circle.png"><img src="images\icons\icons\close-circle.png"></li>
+                            <li>
+                                <img src="images\img\images\todd-s.jpg">
+                                Todd E
+                                <img onclick="accept(this)" class="req" src="images\icons\icons\accept-circle.png">
+                                <img onclick="accept(this)" src="images\icons\icons\close-circle.png">
+                            </li>
+                            <li>
+                                <img src="images\img\images\phil-s.jpg">
+                                Phil K
+                                <img onclick="accept(this)" class="req" src="images\icons\icons\accept-circle.png">
+                                <img onclick="accept(this)" src="images\icons\icons\close-circle.png">
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <div class="connections">
                     <div class="block-header">
-                        <p class="oval">500+</p>
+                        <p id="connections" class="oval">500+</p>
                         <p>Your Connections</p>
                     </div>
                     <div class="block-content">
@@ -85,5 +95,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
